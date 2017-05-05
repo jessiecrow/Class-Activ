@@ -1,0 +1,26 @@
+<style type="text/css">
+	body {
+	}
+	.para {
+		font-family: 'Roboto', cursive;
+		font-size: 100%;
+		font-weight: bolder;
+		line-height: 30px;
+		letter-spacing: 4px;
+	}
+	.para2 {
+		font-family: 'Ravi Prakash', cursive;
+		color: blue;
+	}
+	.para3 {
+		font-family: 'Baloo', cursive;
+		color: red;
+		letter-spacing: 18px;
+	}
+	a:hover {
+		color: red;
+	}
+	a:focus {
+		color: green;
+	}
+</style>
