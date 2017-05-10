@@ -1,0 +1,53 @@
+ <html>
+<body>
+  <h1>Fav Rock Stuff!</h1>
+  <script type="text/javascript">
+
+    var favorites = ["tool", "ac/dc", "fiona apple"];
+
+    var yourFavorite = prompt("What's your lame favorite band?");
+    var lowerFavorite = yourFavorite.toLowerCase();
+
+    var favoriteIndex = favorites.indexOf(lowerFavorite);
+    console.log("Your Favorite: " + yourFavorite);
+    console.log("Lower Favorite: " + lowerFavorite);
+
+    console.log("FAVORITE INDEX! " + favoriteIndex);
+
+    if (favoriteIndex != -1) {
+      document.write("<h1>ROCK ON!!!!! You like " + yourFavorite + " Too!</h1>");
+    } else {
+      document.write("<p>whatevs.</p>");
+    }
+
+  </script>
+</body>
+</html>
+
+
+ <html>
+<body>
+  <h1>Fav Rock Stuff!</h1>
+  <script type="text/javascript">
+
+    var favorites = ["tool", "ac/dc", "fiona apple"];
+
+    var yourFavorite = prompt("What's your lame favorite band?");
+    var lowerFavorite = yourFavorite.toLowerCase();
+
+    var favoriteIndex = favorites.indexOf(lowerFavorite);
+    console.log("Your Favorite: " + yourFavorite);
+    console.log("Lower Favorite: " + lowerFavorite);
+
+    console.log("FAVORITE INDEX! " + favoriteIndex);
+
+    if (favoriteIndex != -1) {
+      document.write("<h1>ROCK ON!!!!! You like " + yourFavorite + " Too!</h1>");
+      document.write("That is the " + (favoriteIndex + 1) +  " most popular band in the list!");
+    } else {
+      document.write("<p>whatevs.</p>");
+    }
+
+  </script>
+</body>
+</html>
