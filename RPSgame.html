@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>RPS Game</title>
+	</head>
+	<body>
+
+		<div id="game">
+			<p>Press R, P, S to play the game!</p>
+		</div>
+
+		<script type="text/javascript">
+		
+			//Create the arrary for selection options
+			var computerChoices = ["r", "s", "p"];
+
+			var wins = 0;
+			var losses = 0;
+			var ties = 0;
+
+			//Whenever a key is pressed, alert "pressed a button"
+			document.onkeyup = function(event) {
+
+				var userGuess = event.key;
+
+				var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+				//If/else statements for game logic
+				if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+
+					var html = "<p>Press r, p, s to start playing the game!</p>" + 
+					"<p>wins: " + wins + "</p>" +
+					"<p>losses: " + losses + "</p>" +
+					"<p>ties: " + ties + "</p>";
+
+					document.querySelector("#game").innerHTML = html;
+
+				}
+			}
+
+
+
+
+
+
+		</script>
+
+	</body>
+</html>
