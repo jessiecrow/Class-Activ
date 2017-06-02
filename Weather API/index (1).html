@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather Conditions</title>
+</head>
+
+<body>
+
+  <form>City <input id="city" name="city"> State <input id="state">
+    <button id="lookup">Look Up!</button>
+  </form>
+
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+    // constructing a queryURL variable we will use instead of the literal string
+    // inside of the ajax function
+
+    $("#lookup").on('click', function(e) {
+
+      e.preventDefault();
+      var queryURL = "http://api.wunderground.com/api/eb719d97304322cd/" +
+      "conditions/q";
+
+      var city = $("#city").val();
+      var state = $("#state").val();
+      queryURL = queryURL + "/" + state + "/" + city + ".json";
+
+      console.log(queryURL);
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).done(function(response) {
+        // do something fun!
+        alert("Hey! " + city + " feels like " + response.current_observation.feelslike_c);
+        console.log(response.current_observation.UV);
+        // console.log(response.Runtime);
+      });
+
+    });
+// ---------------------------------------------------------
+
+  </script>
+
+</body>
+
+</html>
